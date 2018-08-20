@@ -1,0 +1,48 @@
+@import '../vars';
+
+.header{
+    width: 100%;
+    margin: 0px;
+    background-color: $blue;
+    // Page title
+    .header-title{
+        display: flex;
+        align-content: center;
+        width: 100%;
+        a{
+            text-decoration: none;
+            margin: 0px;
+            color: $white;
+            font-family: $title;
+            font-size: 52px;
+            margin-left: 15px;
+        }
+        // Contains greet and logout
+        .header-right{
+            display: flex;
+            width: 80%;
+            align-items: center;
+            justify-content: flex-end;
+            float: right;
+            // Greeting next to Logout button
+            #hello{
+                color: $white;
+                font-family: $title;
+                font-size: 18px;
+            }
+            // Logout button
+            #menu-btn{
+                margin-left: 15px;
+                margin-right: 25px;
+            }
+        }
+    }
+    #header-plant{
+        clear: both;
+        height: 200px;
+        width: 100%;
+        background-image: url('../img/plants.jpg');
+        background-size: cover;
+    }
+}
+
