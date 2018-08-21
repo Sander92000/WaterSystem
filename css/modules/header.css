@@ -1,0 +1,36 @@
+.header {
+  width: 100%;
+  margin: 0px;
+  background-color: #4bb5e8; }
+  .header .header-title {
+    display: flex;
+    align-content: center;
+    width: 100%; }
+    .header .header-title a {
+      text-decoration: none;
+      margin: 0px;
+      color: white;
+      font-family: "Kalam", cursive;
+      font-size: 52px;
+      margin-left: 15px; }
+    .header .header-title .header-right {
+      display: flex;
+      width: 80%;
+      align-items: center;
+      justify-content: flex-end;
+      float: right; }
+      .header .header-title .header-right #hello {
+        color: white;
+        font-family: "Kalam", cursive;
+        font-size: 18px; }
+      .header .header-title .header-right #menu-btn {
+        margin-left: 15px;
+        margin-right: 25px; }
+  .header #header-plant {
+    clear: both;
+    height: 200px;
+    width: 100%;
+    background-image: url("../img/plants.jpg");
+    background-size: cover; }
+
+/*# sourceMappingURL=header.css.map */
