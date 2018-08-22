@@ -36,17 +36,17 @@ void setup() {
 }
 
 void loop () {
-
-  for (int i=0; i<numPlants;i++){
-    Serial.println("Sending: " + plantNames[i]);
+  
+  for (int i=0; i<numPlants; i++){
     int plant_id = i+1;
     plantHumidityValues[i] = readSensor(plantPins[i], plantNames[i]);
-    data = "api_key=" + api_key + "&plant_id" + plant_id +"&humidity=" + plantHumidityValues[0];
+    data = "api_key=" + api_key + "&plant_id=" + plant_id +"&humidity=" + plantHumidityValues[0];
+    Serial.println(data);
     httppost(server, uri, data);
-  }
-  Serial.println("-------------------------------------");
-
-  delay(36 * 10000);
+    delay(5000);
+  } 
+  println("-------------------------------------");
+  delay(10000);
 }
 
 void resetWifi() {
@@ -96,7 +96,7 @@ void httppost (String server, String uri, String data) {
    * the data is being sent, the response of the server and if the data has been posted.
    */
   esp.println("AT+CIPSTART=\"TCP\",\"" + server + "\",80");//start a TCP connection.
-  delay(5000);
+  
   if( esp.find("OK")) {
     Serial.println("TCP connection ready...");
   }
@@ -112,15 +112,12 @@ void httppost (String server, String uri, String data) {
   String sendCmd = "AT+CIPSEND=";
   esp.print(sendCmd);
   esp.println(postRequest.length() );
-  delay(5000);
 
   if(esp.find(">")) { 
     Serial.println("Sending.."); 
     esp.print(postRequest);
-    delay(1000);
     if(esp.find("SEND OK")) { 
       Serial.println("Packet sent");
-      delay(1000);
       while (esp.available()) {
         String tmpResp = esp.readString();
         Serial.println(tmpResp);
@@ -128,7 +125,6 @@ void httppost (String server, String uri, String data) {
 
      // close the connection
      Serial.println("Closing connection");
-     delay(1000);
      esp.println("AT+CIPCLOSE");
     }
   }
