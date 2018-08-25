@@ -39,7 +39,6 @@ void loop () {
   
   for (int i=0; i<numPlants; i++){
     int plant_id = i+1;
-    plantHumidityValues[i] = readSensor(plantPins[i], plantNames[i]);
     data = "api_key=" + api_key + "&plant_id=" + plant_id +"&humidity=" + plantHumidityValues[0];
     Serial.println(data);
     httppost(server, uri, data);
