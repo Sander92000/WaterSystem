@@ -27,9 +27,17 @@ class Weather{
     public function show(){
         echo '<div class="today">';
         echo '<h2>Conditions Today</h2>';
+        echo '<div class="weather">';
+        echo '<img src="../img/icons/thermometer.png" alt="temperature icon">';
         echo '<p>Temperature: <span id="temp">' . $this->temp . '°C</span></p>';
+        echo '</div>';
+        echo '<div class="weather">';
+        echo '<img src="../img/icons/drop.png" alt="humidity icon">';
         echo '<p>Humidity: <span id="humidity">' . $this->hum . '%</span></p>';
+        echo '</div>';
+        echo '<div class="weather">';
         echo '<p>Light: <span id="light">1500 lum<span></p>';
+        echo '</div>';
         echo '</div>';
     }
 
