@@ -1,15 +1,25 @@
+#include <SimpleDHT.h>
 #include "SoftwareSerial.h"
 
+SoftwareSerial esp(11, 10); // RX, TX
+SimpleDHT11 dht11;
 
+// Wifi variables
 String ssid ="Freebox-78A19C";
 String password="Protected";
 
-SoftwareSerial esp(11, 10);// RX, TX
-
+// http variables
+String api_key = "ABC123";
 String data;
+String data_temp;
 String server = "hextrial.com";
 String uri = "/projects/watersystem/php/receive-data.php";
-String api_key = "ABC123";
+String uri_temp = "projects/watersystem/php/weather-data.php";
+
+// Temperature variables
+int pinDHT11 = 2; // Pin for air temperature
+String air_temp;
+String air_hum;
 
 // Sensor variables
 const int numPlants = 5;
@@ -18,6 +28,7 @@ String plantNames[numPlants] = {"Glycine","Basilique","Morning Blue","Cucamelon"
 int plantHumidityValues[numPlants];
 
 void setup() {
+  
   esp.begin(115200);
   Serial.begin(115200);
   Serial.println("-------------------------------------");
@@ -36,16 +47,13 @@ void setup() {
 }
 
 void loop () {
-  
   for (int i=0; i<numPlants; i++){
     int plant_id = i+1;
-    data = "api_key=" + api_key + "&plant_id=" + plant_id +"&humidity=" + plantHumidityValues[0];
-    Serial.println(data);
+    data = "api_key=" + api_key + "&plant_id=" + plant_id + "&humidity=" + plantHumidityValues[i];
     httppost(server, uri, data);
     delay(5000);
   } 
-  println("-------------------------------------");
-  delay(10000);
+  delay(3600000);
 }
 
 void resetWifi() {
@@ -139,5 +147,11 @@ int readSensor(int plantPin, String plantName){
   value = map(value, 1023, 250, 0, 100);
   Serial.println("Soil humidity " + plantName + ": " + value + "%");
   return value;
+}
+
+int readTemperature(int pin){
+
+
+  //return temperature, humidity;
 }
 

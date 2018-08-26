@@ -17,13 +17,14 @@
         ?>
         <div class="container">
             <div class="content">
-
-                <div class="today">
-                    <h2>Conditions Today</h2>
-                    <p>Temperature: <span id="temp">30°C</span></p>
-                    <p>Humidity: <span id="humidity">10%</span></p>
-                    <p>Light: <span id="light">1500 lum<span></p>
-                </div>
+                <?php
+                    include 'Weather.php';
+                    
+                    $weather = new Weather();
+                    
+                    $weather->show();
+                    var_dump('Sander Test');
+                ?>
 
                 <?php
                     // Outside files
