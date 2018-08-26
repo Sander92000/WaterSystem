@@ -23,7 +23,6 @@
                     $weather = new Weather();
                     
                     $weather->show();
-                    var_dump('Sander Test');
                 ?>
 
                 <?php
