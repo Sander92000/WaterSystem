@@ -61,22 +61,45 @@ html, body{
                 font-family: $title;
                 font-size: 22px;
                 margin-left: 22px;
+                width: 20%;
             }
             .plant-menu{
                 display: flex;
                 justify-content: flex-end;
-                align-content: center;
+                align-items: center;
                 width: 80%;
                 height: 60px;
+                padding-right: 10px;
                 img{
                     width: 25px;
                     height: 25px;
+                    border: 1px solid white;
                 }
             }
         }
-        .plant-detail{
+        .plant-details{
             img{
                 float: left;
+            }
+            .normal{
+                font-weight: bold;
+                font-size: 20px;
+                color: black;
+            }
+            .good{
+                font-weight: bold;
+                font-size: 20px;
+                color: green;
+            }
+            .warning{
+                font-weight: bold;
+                font-size: 20px;
+                color: orange;
+            }
+            .danger{
+                font-weight: bold;
+                font-size: 20px;
+                color: red;
             }
         }
     }

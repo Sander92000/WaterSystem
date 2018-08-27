@@ -47,17 +47,36 @@ html, body {
         color: white;
         font-family: "Kalam", cursive;
         font-size: 22px;
-        margin-left: 22px; }
+        margin-left: 22px;
+        width: 20%; }
       #page .plant .plant-title .plant-menu {
         display: flex;
         justify-content: flex-end;
-        align-content: center;
+        align-items: center;
         width: 80%;
-        height: 60px; }
+        height: 60px;
+        padding-right: 10px; }
         #page .plant .plant-title .plant-menu img {
           width: 25px;
-          height: 25px; }
-    #page .plant .plant-detail img {
+          height: 25px;
+          border: 1px solid white; }
+    #page .plant .plant-details img {
       float: left; }
+    #page .plant .plant-details .normal {
+      font-weight: bold;
+      font-size: 20px;
+      color: black; }
+    #page .plant .plant-details .good {
+      font-weight: bold;
+      font-size: 20px;
+      color: green; }
+    #page .plant .plant-details .warning {
+      font-weight: bold;
+      font-size: 20px;
+      color: orange; }
+    #page .plant .plant-details .danger {
+      font-weight: bold;
+      font-size: 20px;
+      color: red; }
 
 /*# sourceMappingURL=home.css.map */
