@@ -1,0 +1,201 @@
+.header {
+  width: 100%;
+  margin: 0px;
+  background-color: #4bb5e8; }
+  .header .header-title {
+    display: flex;
+    align-content: center;
+    width: 100%; }
+    .header .header-title a {
+      text-decoration: none;
+      margin: 0px;
+      color: white;
+      font-family: "Kalam", cursive;
+      font-size: 52px;
+      margin-left: 15px; }
+    .header .header-title .header-right {
+      display: flex;
+      width: 80%;
+      align-items: center;
+      justify-content: flex-end;
+      float: right; }
+      .header .header-title .header-right #hello {
+        color: white;
+        font-family: "Kalam", cursive;
+        font-size: 18px; }
+      .header .header-title .header-right #menu-btn {
+        margin-left: 15px;
+        margin-right: 25px; }
+  .header #header-plant {
+    clear: both;
+    height: 200px;
+    width: 100%;
+    background-image: url("../img/plants.jpg");
+    background-size: cover; }
+
+#menu {
+  position: fixed;
+  right: 0px;
+  height: 100vh;
+  width: 0%;
+  transition: width;
+  transition-duration: .5s;
+  background-color: black; }
+  #menu p {
+    color: white; }
+  #menu #menu-title {
+    display: flex;
+    align-items: center;
+    height: 84px;
+    border: 0.5px solid white;
+    padding-left: 10px; }
+    #menu #menu-title h2 {
+      font-family: "Kalam", cursive;
+      color: white; }
+  #menu .menu-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding-left: 10px; }
+    #menu .menu-link .menu-icon {
+      float: left;
+      width: 50px; }
+    #menu .menu-link .menu-label a {
+      text-decoration: none;
+      color: white; }
+
+nav {
+  display: flex;
+  background-color: black;
+  align-items: center;
+  width: 100%;
+  height: 50px; }
+  nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%; }
+    nav ul li {
+      display: inline; }
+      nav ul li a {
+        padding: 12px;
+        font-family: "Kalam", cursive;
+        text-decoration: none;
+        color: white; }
+        nav ul li a :hover {
+          color: #4bb5e8; }
+  nav .active {
+    background-color: #b1bfbc;
+    color: white;
+    font-style: italic; }
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: black; }
+  footer p {
+    color: white; }
+
+html, body {
+  padding: 0;
+  margin: 0; }
+
+#page {
+  width: 100%;
+  float: left;
+  transition: width;
+  transition-duration: 0.5s; }
+  #page .container {
+    clear: both;
+    width: 80%;
+    margin: auto; }
+    #page .container #new-plant {
+      width: 100%; }
+      #page .container #new-plant label {
+        width: 200px; }
+      #page .container #new-plant input {
+        width: 400px; }
+  #page .today {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    #page .today .weather {
+      display: flex;
+      align-items: center;
+      width: 100%; }
+      #page .today .weather img {
+        float: left;
+        margin-right: 20px;
+        height: 30px; }
+  #page .plant {
+    width: 100%;
+    height: 300px; }
+    #page .plant img {
+      float: left;
+      height: 200px;
+      width: 200px;
+      margin-right: 10px;
+      border-radius: 5px; }
+    #page .plant .plant-title {
+      display: flex;
+      align-content: center;
+      background-color: black;
+      height: 60px; }
+      #page .plant .plant-title h1 {
+        color: white;
+        font-family: "Kalam", cursive;
+        font-size: 22px;
+        margin-left: 22px;
+        width: 20%; }
+      #page .plant .plant-title .plant-menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 80%;
+        height: 60px;
+        padding-right: 10px; }
+        #page .plant .plant-title .plant-menu img {
+          width: 25px;
+          height: 25px;
+          border: 1px solid white; }
+    #page .plant .plant-details img {
+      float: left; }
+    #page .plant .plant-details .normal {
+      font-weight: bold;
+      font-size: 20px;
+      color: black; }
+    #page .plant .plant-details .good {
+      font-weight: bold;
+      font-size: 20px;
+      color: green; }
+    #page .plant .plant-details .warning {
+      font-weight: bold;
+      font-size: 20px;
+      color: orange; }
+    #page .plant .plant-details .danger {
+      font-weight: bold;
+      font-size: 20px;
+      color: red; }
+
+form {
+  border-style: 1px solid black;
+  height: 600px;
+  padding: 30px; }
+  form label {
+    width: 300px; }
+  form #btn-submit {
+    width: 200px;
+    color: white;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    border-style: none;
+    background-color: #4bb5e8;
+    border-radius: 10px; }
+
+/*# sourceMappingURL=stylesheet.css.map */

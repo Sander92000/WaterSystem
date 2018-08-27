@@ -1,0 +1,12 @@
+//Import variables
+@import 'vars';
+
+//Import modules
+@import 'modules/header.scss';
+@import 'modules/menu.scss';
+@import 'modules/nav.scss';
+@import 'modules/footer.scss';
+
+//Import pages
+@import 'home.scss';
+@import 'new.scss';

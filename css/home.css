@@ -1,0 +1,82 @@
+html, body {
+  padding: 0;
+  margin: 0; }
+
+#page {
+  width: 100%;
+  float: left;
+  transition: width;
+  transition-duration: 0.5s; }
+  #page .container {
+    clear: both;
+    width: 80%;
+    margin: auto; }
+    #page .container #new-plant {
+      width: 100%; }
+      #page .container #new-plant label {
+        width: 200px; }
+      #page .container #new-plant input {
+        width: 400px; }
+  #page .today {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    #page .today .weather {
+      display: flex;
+      align-items: center;
+      width: 100%; }
+      #page .today .weather img {
+        float: left;
+        margin-right: 20px;
+        height: 30px; }
+  #page .plant {
+    width: 100%;
+    height: 300px; }
+    #page .plant img {
+      float: left;
+      height: 200px;
+      width: 200px;
+      margin-right: 10px;
+      border-radius: 5px; }
+    #page .plant .plant-title {
+      display: flex;
+      align-content: center;
+      background-color: black;
+      height: 60px; }
+      #page .plant .plant-title h1 {
+        color: white;
+        font-family: "Kalam", cursive;
+        font-size: 22px;
+        margin-left: 22px;
+        width: 20%; }
+      #page .plant .plant-title .plant-menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 80%;
+        height: 60px;
+        padding-right: 10px; }
+        #page .plant .plant-title .plant-menu img {
+          width: 25px;
+          height: 25px;
+          border: 1px solid white; }
+    #page .plant .plant-details img {
+      float: left; }
+    #page .plant .plant-details .normal {
+      font-weight: bold;
+      font-size: 20px;
+      color: black; }
+    #page .plant .plant-details .good {
+      font-weight: bold;
+      font-size: 20px;
+      color: green; }
+    #page .plant .plant-details .warning {
+      font-weight: bold;
+      font-size: 20px;
+      color: orange; }
+    #page .plant .plant-details .danger {
+      font-weight: bold;
+      font-size: 20px;
+      color: red; }
+
+/*# sourceMappingURL=home.css.map */

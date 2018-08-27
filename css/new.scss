@@ -1,0 +1,20 @@
+@import 'vars';
+
+form{
+    border-style: 1px solid $black;
+    height: 600px;
+    padding: 30px;
+    label{
+        width: 300px;
+    }
+    #btn-submit{
+        width: 200px;
+        color: $white;
+        font-size: 20px;
+        margin: 20px;
+        padding: 20px;
+        border-style: none;
+        background-color: $blue;
+        border-radius: 10px;
+    }
+}
